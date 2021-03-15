@@ -1,4 +1,4 @@
-# zagreb_dhcp
+# Less is More - LIM
 These are dHCP inspired processing pipelines for neonatal MRI 
 The repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) studyfolder
 
@@ -17,16 +17,5 @@ One purpose is to achieve tissue segmenation that can be used in the dMRI analys
 
 NOTE - current version of [DrawEM version 1.3](https://github.com/MIRTK/DrawEM) has incorporated optional segmentation according to the [M-CRIB_2.0 atlas](https://osf.io/4vthr/)
 
-## Diffusion pipeline in /dMRI
-To process dMRI neonatal data 
-
-Different approaches may be taken
-- 5TT framework in MRtrix and anatomical parcellations for structural dMRI connectiviy analysis
-- Potentially the [dhcp-diffusion-pipeline](https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release)
-
-## Resting-state fMRI pipeline in /rsfMRI
-To process rs-fMRI neonatal data.
-
-This would use the [dhcp-fmri-pipeline](https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline)
 
 

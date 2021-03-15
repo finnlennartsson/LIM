@@ -13,7 +13,6 @@ The scripts uses Docker and heudiconv
 
 Arguments:
   sID				Subject ID (e.g. PK356) 
-  ssID                       	Session ID (e.g. MR2)
 Options:
   -h / -help / --help           Print usage.
 "
@@ -22,10 +21,9 @@ Options:
 
 ################ ARGUMENTS ################
 
-[ $# -ge 2 ] || { usage; }
+[ $# -ge 1 ] || { usage; }
 command=$@
 sID=$1
-ssID=$2
 
 # Define Folders
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -62,15 +60,14 @@ docker run --name heudiconv_container \
            --volume $dcmdir:/dataIn:ro \
            --volume $sourcedatadir:/dataOut \
            nipy/heudiconv \
-               -d /dataIn/sub-{subject}/ses-{session}/*/*.dcm \
-               -f /code/heudiconv_heuristics/zagreb_heuristic.py \
+               -d /dataIn/sub-{subject}/*/*.dcm \
+               -f /code/heudiconv_heuristics/lim_heuristic.py \
                -s ${sID} \
-               -ss ${ssID} \
                -c dcm2niix \
                -b \
                -o /dataOut \
                --overwrite \
-           > ${logdir}/sub-${sID}_ses-${ssID}_$scriptname.log 2>&1 
+           > ${logdir}/sub-${sID}_$scriptname.log 2>&1 
            
 # heudiconv makes files read only
 #    We need some files to be writable, eg for dHCP pipelines
