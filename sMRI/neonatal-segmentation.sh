@@ -75,11 +75,11 @@ if [ ! -d $logdir ]; then mkdir -p $logdir; fi
 #source ~/Software/DrawEM/parameters/path.sh
 
 # Update T2 to point to T2 basename
-T2=`basename $T2 .nii.gz`
+T2base=`basename $T2 .nii.gz`
 
 ################################################################
 ## 1. Run neonatal-segmentation
-if [ -f $datadir/segmentations/${T2}_all_labels.nii.gz ];then
+if [ -f $datadir/segmentations/${T2base}_all_labels.nii.gz ];then
     echo "Segmentation already run/exists in $datadir"
 else
     if [ "$mask" = "" ];then
