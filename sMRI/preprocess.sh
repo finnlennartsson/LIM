@@ -66,7 +66,7 @@ cat $codedir/$script.sh >> ${logdir}/sub-${sID}_sMRI_$script.log 2>&1
 echo
 
 ##################################################################################
-# 0. Copy to files to datadir and regdir
+# 0. Copy to file to datadir 
 if [ ! -d $datadir ]; then mkdir -p $datadir; fi
 
 cp $t2w $datadir/.
