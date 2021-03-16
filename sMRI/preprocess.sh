@@ -114,3 +114,12 @@ fi
 cd $currdir
 
 ##################################################################################
+## 3. Finish by creating symbolic link to relevant preprocessed file
+cd $datadir
+
+if [ ! -f sub-${sID}_desc-preproc_T2w.nii.gz ]; then 
+	# create symbolic link to preproc file
+	ln -s $t2w.nii.gz sub-${sID}_desc-preproc_T2w.nii.gz;
+fi
+	
+cd $currdir
