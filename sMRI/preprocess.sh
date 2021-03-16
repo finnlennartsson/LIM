@@ -34,7 +34,7 @@ codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 shift
 while [ $# -gt 0 ]; do
     case "$1" in
-	-T2) shift; tw2=$1; ;;
+	-T2) shift; t2w=$1; ;;
 	-d|-data-dir)  shift; datadir=$1; ;;
 	-h|-help|--help) usage; ;;
 	-*) echo "$0: Unrecognized option $1" >&2; usage; ;;
