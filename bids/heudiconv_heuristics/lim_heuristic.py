@@ -22,7 +22,6 @@ def infotodict(seqinfo):
     # ANATOMY
     t1w = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_T1w')
     t2w = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_T2w')
-    flair = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_FLAIR')
     
     # DWI
     
@@ -32,7 +31,7 @@ def infotodict(seqinfo):
 
     # SBRefs
     
-    info = {t1w: [], t2w: [], flair: []}
+    info = {t1w: [], t2w: []}
     last_run = len(seqinfo)
 
     for idx, s in enumerate(seqinfo):
@@ -65,11 +64,8 @@ def infotodict(seqinfo):
         if ('t1_mprage_sag' in s.protocol_name) and ('NORM' in s.image_type): # takes normalized images:
             info[t1w] = [s.series_id] # assign if a single series meets criteria   
         # T2w
-        if ('T2w_SPC' in s.protocol_name) and ('NORM' in s.image_type): # takes normalized images
             info[t2w] = [s.series_id] # assign if a single series meets criteria
         # FLAIR
-        if ('t2_space_dark-fluid_sag_iso' in s.protocol_name) and ('NORM' in s.image_type): # takes normalized images
-            info[flair] = [s.series_id] # assign if a single series meets criteria
         
         # DIFFUSION
             
