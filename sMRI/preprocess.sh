@@ -11,7 +11,7 @@ and to further preproc of sMRI data.
 Arguments:
   sID				Subject ID (e.g. 108) 
 Options:
-  -T2				T2 image (default: sourcedata/sub-$sID/anat/sub-sID_T2w.nii.gz)
+  -T2				T2 image (default: sourcedata/sub-sID/anat/sub-sID_T2w.nii.gz)
   -d / -data-dir  <directory>   The directory used to output the preprocessed files (default: derivatives/sMRI/preproc)
   -h / -help / --help           Print usage.
 "
