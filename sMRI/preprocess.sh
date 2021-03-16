@@ -77,6 +77,8 @@ t2w=`basename $t2w .nii.gz` #sub-${sID}_T2w
 ##################################################################################
 # 1. Upsample T2w (required for DrawEM neonatal-segmentation)
 
+cd $datadir
+
 image=$t2w;
 if [[ $image = "" ]];then echo "No T2w image"; exit;
 else
