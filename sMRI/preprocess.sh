@@ -82,7 +82,7 @@ cd $datadir
 image=$t2w;
 if [[ $image = "" ]];then echo "No T2w image"; exit;
 else
-    if [[ $image = sub-${sID}_T2w ]];then
+    if [[ $image = sub-${sID}_run-001_T2w ]];then
 	# BIDS compliant highres name 
 	highres=`echo $image | sed 's/\_T2w/\_desc\-hires\_T2w/g'`
     else
