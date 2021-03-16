@@ -10,7 +10,7 @@ Arguments:
   sID				Subject ID (e.g. 108) 
   age				Age at scanning in weeks (e.g. 40)
 Options:
-  -T2				T2 image to segment (default: derivatives/sMRI/preproc/sub-sID/sub-sID_T2w.nii.gz)
+  -T2				T2 image to segment (default: derivatives/sMRI/preproc/sub-sID/sub-sID_desc-preproc_T2w.nii.gz)
   -m / -mask			mask (default: is no mask) #derivatives/sMRI/preproc/sub-sID/sub-sID_space-T2w_mask.nii.gz)
   -d / -data-dir  <directory>   The directory used to run the script and output the files (default: derivatives/sMRI/neonatal-segmentation/sub-sID)
   -a / -atlas	  		Atlas to use for DrawEM neonatal segmentation (default: ALBERT)    
@@ -29,7 +29,7 @@ age=$2
 
 currdir=`pwd`
 T2=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_desc-preproc_T2w.nii.gz
-mask="";#mask=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_space-T2w_mask.nii.gz
+mask=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_space-T2w_mask.nii.gz
 datadir=derivatives/sMRI/neonatal-segmentation/sub-$sID
 threads=10
 atlas=ALBERT
@@ -92,8 +92,6 @@ else
 	      > $logdir/sub-${sID}_$script.txt 2>&1;
     fi
 fi
-
-cd $currdir
 
 
 
