@@ -25,7 +25,7 @@ Options:
 [ $# -ge 2 ] || { usage; }
 command=$@
 sID=$1
-age=$3
+age=$2
 
 currdir=`pwd`
 T2=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_desc-preproc_T2w.nii.gz
