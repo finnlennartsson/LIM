@@ -4,7 +4,7 @@
 usage()
 {
   base=$(basename "$0")
-  echo "usage: $base subjectID sessionID [options]
+  echo "usage: $base subjectID [options]
 Conversion of DICOMs to BIDS and validation of BIDS dataset
 The scripts uses Docker and heudiconv
 - DICOMs are expected to be in $studyfolder/dicomdir
@@ -12,7 +12,7 @@ The scripts uses Docker and heudiconv
 - NIfTIs are written into a BIDS-organised folder $studyfolder/sourcedata (SIC!)
 
 Arguments:
-  sID				Subject ID (e.g. PK356) 
+  sID				Subject ID (e.g. 108) 
 Options:
   -h / -help / --help           Print usage.
 "
