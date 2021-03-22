@@ -1,5 +1,5 @@
 #!/bin/bash
-# LIM
+# Less is More - LIM
 #
 usage()
 {
