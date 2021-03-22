@@ -1,13 +1,13 @@
 #!/bin/bash
-# LIM
+# Less is More - LIM
 #
 usage()
 {
   base=$(basename "$0")
   echo "usage: $base subjectID [options]
-make high-resolution versions T2w \
-create relevant brain masks for neonatal-segmentation \
-and to further preproc of sMRI data.
+- make high-resolution versions T2w \
+- create relevant brain masks for neonatal-segmentation \
+- and to further preproc of sMRI data.
 Arguments:
   sID				Subject ID (e.g. 108) 
 Options:
