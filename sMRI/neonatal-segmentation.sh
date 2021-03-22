@@ -5,7 +5,7 @@ usage()
 {
   base=$(basename "$0")
   echo "usage: $base subjectID age [options]
-Script to run the mirtk neonatal-segmentation on sMRI_processed data
+Script to run the mirtk neonatal-segmentation on sMRI preprocessed data
 Arguments:
   sID				Subject ID (e.g. 108) 
   age				Age at scanning in weeks (e.g. 40)
@@ -27,6 +27,7 @@ command=$@
 sID=$1
 age=$2
 
+# Set default arguments
 currdir=`pwd`
 T2=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_desc-preproc_T2w.nii.gz
 mask=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_space-T2w_mask.nii.gz
@@ -80,7 +81,7 @@ T2base=`basename $T2 .nii.gz`
 ################################################################
 ## 1. Run neonatal-segmentation
 if [ -f $datadir/segmentations/${T2base}_all_labels.nii.gz ];then
-    echo "Segmentation already run/exists in $datadir"
+    echo "Segmentation already exists in $datadir"
 else
     if [ "$mask" = "" ];then
 	# No mask provided
