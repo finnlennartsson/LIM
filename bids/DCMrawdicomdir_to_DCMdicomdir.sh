@@ -11,7 +11,7 @@ The scripts uses Docker and heudiconv
 - Arranges DICOMs into labelled folders (incl renaming of dcm files) into $studyfolder/dicomdir
 
 Arguments:
-  sID				Subject ID (e.g. 108) 
+  sID				Subject ID (i.e. LIMStudyID) 
 Options:
   -h / -help / --help           Print usage.
 "
