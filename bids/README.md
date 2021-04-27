@@ -1,4 +1,4 @@
-This folder contains scripts that uses [heudiconv](https://heudiconv.readthedocs.io/en/latest/) to convert DICOMs into [BIDS-format](https://bids-specification.readthedocs.io/en/stable/)
+This folder contains scripts that uses [heudiconv](https://heudiconv.readthedocs.io/en/latest/) to convert DICOMs into [BIDS-format](https://bids-specification.readthedocs.io/en/stable/) NIfTIs
 
 - DICOMs are expected to be in "studyfolder"/dicomdir
 - Heuristics-files are located in code-subfolder bids/heudiconv_heuristics
