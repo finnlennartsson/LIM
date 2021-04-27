@@ -12,7 +12,7 @@ The scripts uses Docker and heudiconv
 - NIfTIs are written into a BIDS-organised folder $studyfolder/sourcedata (SIC!)
 
 Arguments:
-  sID				Subject ID (e.g. 108) 
+  sID				Subject ID (i.e. LIMStudyID) 
 Options:
   -h / -help / --help           Print usage.
 "
