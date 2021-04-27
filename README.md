@@ -1,7 +1,7 @@
 # Less is More - LIM
 These are dHCP inspired processing pipelines for neonatal MRI data.
 
-The repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) studyfolder.
+This repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) studyfolder.
 
 The data is organized in the same way as the [2nd data release](https://drive.google.com/file/d/197g9afbg9uzBt04qYYAIhmTOvI3nXrhI/view) for the dHCP and expects the nifti sourcedata files to be located in the BIDS folder /sourcedata (SIC!). 
 
@@ -18,5 +18,6 @@ These includes neonatal segmentation with DrawEM and surface generation and anal
 
 NOTE - current version of [DrawEM version 1.3](https://github.com/MIRTK/DrawEM) has incorporated optional segmentation according to the [M-CRIB_2.0 atlas](https://osf.io/4vthr/)
 
-
-
+## Labels for sMRI data in /label_names
+Various LUTs for anatomical parcellations for the ALBERTs and M-CRIB atlases.
+Also for conversions into MRtrix's 5TT format.
