@@ -1,21 +1,23 @@
 # Less is More - LIM
-These are dHCP inspired processing pipelines for neonatal MRI 
-The repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) studyfolder
+These are dHCP inspired processing pipelines for neonatal MRI data.
 
-The data is organized in the same way as the [2nd data release](https://drive.google.com/file/d/197g9afbg9uzBt04qYYAIhmTOvI3nXrhI/view) for the dHCP and expects the nifti sourcedata files to be located in the BIDS folder /sourcedata (SIC!). Processed data/Processing pipelines store results in /derivatives
+This repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) studyfolder.
+
+The data is organized in the same way as the [2nd data release](https://drive.google.com/file/d/197g9afbg9uzBt04qYYAIhmTOvI3nXrhI/view) for the dHCP and expects the nifti sourcedata files to be located in the BIDS folder /sourcedata (SIC!). 
+
+Processed data/Processing pipelines store results in /derivatives
 
 The processing pipelines and processing scripts are organised as followed: 
 
-## Data organisation /bids
+## Data organisation in /bids
 To organise the data in BIDS datastructure format
 
 ## Structural pipeline in /sMRI
-To process the sMRI data within the framework of the [dhcp-structural-pipeline](https://github.com/BioMedIA/dhcp-structural-pipeline)
+To process the sMRI data within the framework of the [dhcp-structural-pipeline](https://github.com/BioMedIA/dhcp-structural-pipeline).
 These includes neonatal segmentation with DrawEM and surface generation and analysis. 
-
-One purpose is to achieve tissue segmenation that can be used in the dMRI analysis (see below)
 
 NOTE - current version of [DrawEM version 1.3](https://github.com/MIRTK/DrawEM) has incorporated optional segmentation according to the [M-CRIB_2.0 atlas](https://osf.io/4vthr/)
 
-
-
+## Labels for sMRI data in /label_names
+Various LUTs for anatomical parcellations for the ALBERTs and M-CRIB atlases.
+Also for conversions into MRtrix's 5TT format.

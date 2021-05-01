@@ -8,10 +8,10 @@ usage()
 Re-arrangement of raw DICOMs into structured DICOMs
 The scripts uses Docker and heudiconv
 - Raw DICOMs are expected to be in $studyfolder/rawdicomdir
-- Arranges DICOMs are put in $studyfolder/dicomdir
+- Arranges DICOMs into labelled folders (incl renaming of dcm files) into $studyfolder/dicomdir
 
 Arguments:
-  sID				Subject ID (e.g. 108) 
+  sID				Subject ID (i.e. LIMStudyID) 
 Options:
   -h / -help / --help           Print usage.
 "

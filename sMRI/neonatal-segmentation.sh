@@ -1,17 +1,17 @@
 #!/bin/bash
-# LIM
+# Less is More - LIM
 #
 usage()
 {
   base=$(basename "$0")
   echo "usage: $base subjectID age [options]
-Script to run the mirtk neonatal-segmentation on sMRI_processed data
+Script to run the mirtk neonatal-segmentation on sMRI preprocessed data
 Arguments:
   sID				Subject ID (e.g. 108) 
   age				Age at scanning in weeks (e.g. 40)
 Options:
   -T2				T2 image to segment (default: derivatives/sMRI/preproc/sub-sID/sub-sID_desc-preproc_T2w.nii.gz)
-  -m / -mask			mask (default: is no mask) #derivatives/sMRI/preproc/sub-sID/sub-sID_space-T2w_mask.nii.gz)
+  -m / -mask			mask (default: derivatives/sMRI/preproc/sub-sID/sub-sID_space-T2w_mask.nii.gz)
   -d / -data-dir  <directory>   The directory used to run the script and output the files (default: derivatives/sMRI/neonatal-segmentation/sub-sID)
   -a / -atlas	  		Atlas to use for DrawEM neonatal segmentation (default: ALBERT)    
   -t / -threads  <number>       Number of threads (CPU cores) allowed for the registration to run in parallel (default: 10)
@@ -27,6 +27,7 @@ command=$@
 sID=$1
 age=$2
 
+# Set default arguments
 currdir=`pwd`
 T2=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_desc-preproc_T2w.nii.gz
 mask=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_space-T2w_mask.nii.gz
@@ -80,7 +81,7 @@ T2base=`basename $T2 .nii.gz`
 ################################################################
 ## 1. Run neonatal-segmentation
 if [ -f $datadir/segmentations/${T2base}_all_labels.nii.gz ];then
-    echo "Segmentation already run/exists in $datadir"
+    echo "Segmentation already exists in $datadir"
 else
     if [ "$mask" = "" ];then
 	# No mask provided

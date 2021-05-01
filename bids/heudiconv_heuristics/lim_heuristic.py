@@ -64,7 +64,7 @@ def infotodict(seqinfo):
         if ('t1_mprage_sag' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
             info[t1w] = [s.series_id] # assign if a single series meets criteria   
         # T2w
-        if ('t2_tse_tra_1mm' in s.protocol_name) and ('NORM' in s.image_type): # takes normalized images:
+        if ('t2_tse_tra_1mm' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
             info[t2w] = [s.series_id] # assign if a single series meets criteria
         # FLAIR
         
