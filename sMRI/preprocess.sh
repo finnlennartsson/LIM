@@ -11,7 +11,7 @@ usage()
 Arguments:
   sID				Subject ID (e.g. 108) 
 Options:
-  -T2				T2 image (default: sourcedata/sub-sID/anat/sub-sID_T2w.nii.gz)
+  -T2				T2 image (default: sourcedata/sub-sID/anat/sub-sID_run-001_T2w.nii.gz)
   -d / -data-dir  <directory>   The directory used to output the preprocessed files (default: derivatives/sMRI/preproc)
   -h / -help / --help           Print usage.
 "
@@ -25,7 +25,7 @@ command=$@
 sID=$1
 
 currdir=`pwd`
-t2w=sourcedata/sub-$sID/anat/sub-${sID}_T2w.nii.gz
+t2w=sourcedata/sub-$sID/anat/sub-${sID}_run-001_T2w.nii.gz
 datadir=derivatives/sMRI/preproc/sub-$sID
 
 # check whether the different tools are set and load parameters
