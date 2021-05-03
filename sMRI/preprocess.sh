@@ -75,7 +75,11 @@ cp $t2w $datadir/.
 t2w=`basename $t2w .nii.gz` #sub-${sID}_T2w
 
 ##################################################################################
-# 1. Upsample T2w (required for DrawEM neonatal-segmentation)
+# 1. Motion-correction
+# Not yet implememented
+
+##################################################################################
+# 2. Upsample T2w (required for DrawEM neonatal-segmentation)
 
 cd $datadir
 
@@ -100,7 +104,7 @@ fi
 cd $currdir
 
 ##################################################################################
-## 2. Create brain mask in T2w-space
+## 3. Create brain mask in T2w-space
 cd $datadir
 if [ ! -f sub-${sID}_space-T2w_mask.nii.gz ];then
     
