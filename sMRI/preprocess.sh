@@ -24,10 +24,10 @@ Options:
 command=$@
 sID=$1
 
+# Defaults
 currdir=`pwd`
 t2w=sourcedata/sub-$sID/anat/sub-${sID}_run-001_T2w.nii.gz
 datadir=derivatives/sMRI/preproc/sub-$sID
-
 # check whether the different tools are set and load parameters
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
