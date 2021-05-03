@@ -68,7 +68,7 @@ def infotodict(seqinfo):
         if ('t2_tse_tra_1mm' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
             info[t2w] = [s.series_id] # assign if a single series meets criteria
         # 3D T2w space
-        if ('t2_spc_sag_iso.' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
+        if ('t2_spc_sag_iso' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
             info[t2wspc] = [s.series_id] # assign if a single series meets criteria
         # FLAIR
         
