@@ -22,7 +22,8 @@ def infotodict(seqinfo):
     # ANATOMY
     t1w = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_T1w')
     t2w = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_T2w')
-    
+    t2wspc = create_key('sub-{subject}/anat/sub-{subject}_acq-spc_run-00{item:01d}_T2w')
+        
     # DWI
     
     # fMRI
@@ -31,7 +32,7 @@ def infotodict(seqinfo):
 
     # SBRefs
     
-    info = {t1w: [], t2w: []}
+    info = {t1w: [], t2w: [], t2wspc: []}
     last_run = len(seqinfo)
 
     for idx, s in enumerate(seqinfo):
@@ -66,6 +67,9 @@ def infotodict(seqinfo):
         # T2w
         if ('t2_tse_tra_1mm' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
             info[t2w] = [s.series_id] # assign if a single series meets criteria
+        # 3D T2w space
+        if ('t2_spc_sag_iso.' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
+            info[t2wspc] = [s.series_id] # assign if a single series meets criteria
         # FLAIR
         
         # DIFFUSION
