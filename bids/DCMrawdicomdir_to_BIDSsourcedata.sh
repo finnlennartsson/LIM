@@ -30,7 +30,7 @@ codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 studydir=`pwd` #studydir=`dirname -- "$codedir"`
 sourcedatadir=$studydir/sourcedata;
 dcmdir=$studydir/rawdicomdir;
-logdir=${studydir}/derivatives/preprocessing_logs/sub-${sID}/ses-${ssID}
+logdir=${studydir}/derivatives/preprocessing_logs/sub-${sID}
 scriptname=`basename $0 .sh`
 
 if [ ! -d $sourcedatadir ]; then mkdir -p $sourcedatadir; fi
