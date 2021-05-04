@@ -35,9 +35,8 @@ datadir=derivatives/sMRI/neonatal-segmentation/sub-$sID
 threads=10
 atlas=ALBERT
 
-# check whether the different tools are set and load parameters
+# Set codedir (e.g. code/LIM)
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-currdir=`pwd`
 
 shift; shift
 while [ $# -gt 0 ]; do
