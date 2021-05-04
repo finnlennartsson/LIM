@@ -3,12 +3,12 @@
 This folder harbours scripts for processing sMRI files
 
 ## 1. Preprocessing
-Run script process.sh
+Run script preprocess.sh
 
 - Motion-correction (not yet implemented)
-- Upsamples inplane 2D anatomical (to 0.68 mm³, file tag "desc-hires")
-- Creates brain mask ()
-- Makes symbolic link to point at final file in preprocess pipeline ()
+- Upsamples inplane 2D anatomical (to 0.68 mm³, file tag/name "desc-hires")
+- Creates brain mask (file tag/name "space-T2w_mask")
+- Makes symbolic link to point at final file in preprocess pipeline (file tag/name "desc-preproc_T2w" -> final file in pipeline)
 
 ## 2. Neonatal segmentation
 Run script neonatal-segmentation.sh
