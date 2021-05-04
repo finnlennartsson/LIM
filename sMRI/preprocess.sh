@@ -84,9 +84,9 @@ t2w=`basename $t2w .nii.gz` #sub-${sID}_T2w
 cd $datadir
 
 image=$t2w;
-if [[ $image = "" ]];then echo "No T2w image"; exit;
+if [[ $image = "" ]]; then echo "No T2w image"; exit;
 else
-    if [[ $image = sub-${sID}_run-001_T2w ]];then
+    if [[ $image = sub-${sID}_run-001_T2w ]] || [[ $image = sub-${sID}_acq-spc_run-001_T2w ]]; then
 	# BIDS compliant highres name 
 	highres=`echo $image | sed 's/\_T2w/\_desc\-hires\_T2w/g'`
     else
@@ -94,7 +94,7 @@ else
 	highres=desc-hires_${image}
     fi
     # Do interpolation (spline)
-    if [ ! -f $highres.nii.gz ];then
+    if [ ! -f $highres.nii.gz ]; then
 	flirt -in $image.nii.gz -ref $image.nii.gz -applyisoxfm 0.68 -nosearch -out $highres.nii.gz -interp spline
     fi
     # and update t2w to point to highres
