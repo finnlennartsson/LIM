@@ -94,4 +94,4 @@ else
 fi
 
 
-echo done
+echo finished
