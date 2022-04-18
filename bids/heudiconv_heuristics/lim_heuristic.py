@@ -63,13 +63,13 @@ def infotodict(seqinfo):
         # ANATOMY
         # 3D T1w
         if ('t1_mprage_sag' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
-            info[t1w] = [s.series_id] # assign if a single series meets criteria   
+            info[t1w].append(s.series_id) # append if multiple series meet criteria
         # T2w
         if ('t2_tse_tra_1mm' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
-            info[t2w] = [s.series_id] # assign if a single series meets criteria
+            info[t2w].append(s.series_id) # append if multiple series meet criteria
         # 3D T2w space
         if ('t2_spc_sag_iso' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
-            info[t2wspc] = [s.series_id] # assign if a single series meets criteria
+            info[t2wspc].append(s.series_id) # append if multiple series meet criteria
         # FLAIR
         
         # DIFFUSION
