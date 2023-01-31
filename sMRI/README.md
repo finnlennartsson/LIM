@@ -19,3 +19,8 @@ NOTE:
 - The current parameters from DrawEM in dhcp performs better than DrawEM1p3. To run dhcp's neonatal-segmentation, run script neonatal-segmentation_dhcp-structural-pipeline_only.sh
 
 ## 3. Quality assurance
+
+
+
+
+## 4. Volumetry
