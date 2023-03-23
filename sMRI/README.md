@@ -10,7 +10,8 @@ Run script preprocess.sh
 - Creates brain mask (file tag/name "space-T2w_mask")
 - Makes symbolic link to point at final file in preprocess pipeline (file tag/name "desc-preproc_T2w" -> final file in pipeline)
 
-![Screenshot from 2022-05-12 10-42-28 (1)](https://user-images.githubusercontent.com/80758491/227241846-23827b9e-1683-4773-a1db-f47d13b8d13a.png)
+![Screenshot (61)](https://user-images.githubusercontent.com/80758491/227244469-068f382c-0857-4683-a686-454c817121fe.png)
+
 
 
 ## 2. Neonatal segmentation
@@ -20,6 +21,9 @@ This runs DrawEM algorithm on anatomical T2w data.
 
 NOTE: 
 - The current parameters from DrawEM in dhcp performs better than DrawEM1p3. To run dhcp's neonatal-segmentation, run script neonatal-segmentation_dhcp-structural-pipeline_only.sh
+
+![image](https://user-images.githubusercontent.com/80758491/227246242-cc0cdd3b-7d2f-421c-8953-2df15188a288.png)
+
 
 ## 3. Quality assurance and editing
 Run the command itksnap on the acquired neonatal segmentation
