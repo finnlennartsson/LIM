@@ -19,8 +19,7 @@ This uses a [docker](https://www.docker.com/)-invoked call of [heudiconv](https:
 
 ### Direct conversion  
 1. Run script `DCMrawdicomdir_to_BIDSsourcedata.sh`  
-This makes a conversion straight from non-organized DCMs in `"studydir"/rawdicomdir` to BIDS-organized NIfTIs in `"studydir"/sourcedata` (SIC!).  
-The script uses the same [docker](https://www.docker.com/)-invoked call of [heudiconv](https://heudiconv.readthedocs.io/en/latest/) to convert DCMs in `"studydir"/rawdicomdir` into BIDS-organised NIfTIs in `"studydir"/sourcedata` (SIC!) with heuristics-files (governing the rules for the conversion)  located in code-subfolder `bids/heudiconv_heuristics`.  
+This makes a conversion straight from non-organized DCMs in `"studydir"/rawdicomdir` to BIDS-organized NIfTIs in `"studydir"/sourcedata` (SIC!). The script uses the same [docker](https://www.docker.com/)-invoked call of [heudiconv](https://heudiconv.readthedocs.io/en/latest/) to convert DCMs in `"studydir"/rawdicomdir` into BIDS-organised NIfTIs in `"studydir"/sourcedata` (SIC!) with heuristics-files (governing the rules for the conversion)  located in code-subfolder `bids/heudiconv_heuristics`.  
 The conversion assumes that there is a certain organisation of the DCMs given the call
 https://github.com/finnlennartsson/LIM/blob/a2b0fa4523d35bd4abcc57a4d5190dd960f21c8c/bids/DCMrawdicomdir_to_BIDSsourcedata.sh#L63
 
