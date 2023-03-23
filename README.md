@@ -1,11 +1,11 @@
 # Less is More - LIM
 These are dHCP inspired processing pipelines for neonatal MRI data.
 
-This repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) studyfolder.
+This repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) `"studyfolder"`.
 
-The data is organized in the same way as the [2nd data release](https://drive.google.com/file/d/197g9afbg9uzBt04qYYAIhmTOvI3nXrhI/view) for the dHCP and expects the nifti sourcedata files to be located in the BIDS folder /sourcedata (SIC!). 
+The data is organized in the same way as the [2nd data release](https://drive.google.com/file/d/197g9afbg9uzBt04qYYAIhmTOvI3nXrhI/view) for the dHCP and expects the NIfTI sourcedata files to be located in the BIDS folder `/sourcedata` (SIC!). 
 
-Processed data/Processing pipelines store results in /derivatives
+Processed data/Processing pipelines store results in `/derivatives`
 
 The processing pipelines and processing scripts are organised as followed: 
 
