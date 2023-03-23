@@ -28,7 +28,10 @@ NOTE:
 ## 3. Quality assurance and editing
 Run the command itksnap on the acquired neonatal segmentation
 - Visual assurance that the segementation is accurate with no glaring mistakes that would affect the volumetry results
-- In the case of larger mistakes (e.g. big areas of CSF labeled as brain tissue), editing is done using manual or semi-automatic (mainly voxel-based) methods.
+- In the case of larger mistakes (e.g. big areas of CSF labeled as brain tissue), editing is done using manual or semi-automatic (mainly voxel-based) methods. Example below:
+
+![image](https://user-images.githubusercontent.com/80758491/227246635-5dae8727-8691-4f2b-81f5-cd741f1add78.png)
+
 
 
 ## 4. Volumetry
