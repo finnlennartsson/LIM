@@ -2,7 +2,11 @@
 
 This folder harbours scripts for processing sMRI files
 
-## 1. Preprocessing
+## 1. Conversion from DICOM to NIfTI
+- Using DCMrawdicomdir_to_BIDSsourcedata.sh
+- Visual inspection of images
+
+## 2. Preprocessing
 Run script preprocess.sh
 
 - Motion-correction (not yet implemented)
@@ -14,7 +18,7 @@ Run script preprocess.sh
 
 
 
-## 2. Neonatal segmentation
+## 3. Neonatal segmentation
 Run script neonatal-segmentation.sh
 
 This runs DrawEM algorithm on anatomical T2w data.
@@ -25,7 +29,7 @@ NOTE:
 ![image](https://user-images.githubusercontent.com/80758491/227246242-cc0cdd3b-7d2f-421c-8953-2df15188a288.png)
 
 
-## 3. Quality assurance and editing
+## 4. Quality assurance and editing
 Run the command itksnap on the acquired neonatal segmentation
 - Visual assurance that the segementation is accurate with no glaring mistakes that would affect the volumetry results
 - In the case of larger mistakes (e.g. big areas of CSF labeled as brain tissue), editing is done using manual or semi-automatic (mainly voxel-based) methods. Example below with ventricular correction:
@@ -37,7 +41,7 @@ Run the command itksnap on the acquired neonatal segmentation
 
 
 
-## 4. Volumetry
+## 5. Volumetry
 Run the scripts Gray_White_Hippocampus_Thalamus_Extractor.sh and then Volume_calculator.sh
 - Creates labels with these structures of interest based on the previously obtained segmentations (based on the command fslmaths)
 - Volume calculation where the structures are quantified based on the command fslstats -V. Alternatively, itksnap can be used where it displays the volumes visually in the program (concordance of results between itksnap and fsleyes command upon inspection). 
