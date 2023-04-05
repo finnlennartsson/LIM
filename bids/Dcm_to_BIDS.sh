@@ -80,7 +80,7 @@ docker run --name heudiconv_container \
            --volume $dcmdir:/dataIn:ro \
            --volume $rawdatadir:/dataOut \
            nipy/heudiconv \
-               -d /dataIn/{subject}/*/DCM/*/*.dcm \
+               -d /dataIn/{subject}/*/*/*/*.dcm \
                -f /heuristic/$heuristicfile \
                -s ${sID} \
                -c dcm2niix \
