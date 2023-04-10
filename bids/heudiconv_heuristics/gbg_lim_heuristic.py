@@ -62,13 +62,13 @@ def infotodict(seqinfo):
         """
         # ANATOMY
         # 3D T1w
-        if ('t1_mprage_sag' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
+        if ('Sag SilentMR T1' in s.series_description) and ('ORIGINAL' in s.image_type): # takes normalized images:
             info[t1w].append(s.series_id) # append if multiple series meet criteria
         # T2w
-        if ('t2_tse_tra_1mm' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
+        if ('Ax T2 FSE 1,0mm' in s.series_description) and ('ORIGINAL' in s.image_type): # takes normalized images:
             info[t2w].append(s.series_id) # append if multiple series meet criteria
         # 3D T2w space
-        if ('t2_spc_sag_iso' in s.series_description) and ('NORM' in s.image_type): # takes normalized images:
+        if ('sag CUBE T2' in s.series_description) and ('ORIGINAL' in s.image_type): # takes normalized images:
             info[t2wspc].append(s.series_id) # append if multiple series meet criteria
         # FLAIR
         
