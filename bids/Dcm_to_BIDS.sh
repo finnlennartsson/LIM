@@ -81,27 +81,47 @@ docker run --name heudiconv_container \
            --volume $rawdatadir:/dataOut \
            nipy/heudiconv \
                -d /dataIn/{subject}/*/*/*.dcm \
-               -f /heuristic/$heuristicfile \
+               -f convertall \
                -s ${sID} \
-               -c dcm2niix \
+               -c none \
                -b \
                -o /dataOut \
                --overwrite \
            > ${logdir}/sub-${sID}_$scriptname.log 2>&1 
            
+
+#docker run --name heudiconv_container \
+#           --user $userID \
+#           --rm \
+#           -it \
+#           --volume $studydir:/base \
+#	   --volume $codedir:/code \
+#	   --volume $heuristicdir:/heuristic \
+#           --volume $dcmdir:/dataIn:ro \
+#           --volume $rawdatadir:/dataOut \
+#           nipy/heudiconv \
+#               -d /dataIn/{subject}/*/*/*.dcm \
+#               -f /heuristic/$heuristicfile \
+#               -s ${sID} \
+#               -c dcm2niix \
+#               -b \
+#               -o /dataOut \
+#               --overwrite \
+#           > ${logdir}/sub-${sID}_$scriptname.log 2>&1 
+	   
 # heudiconv makes files read only
 #    We need some files to be writable, eg for dHCP pipelines
 chmod -R u+wr,g+wr $rawdatadir
 
 
 # We run the BIDS-validator:
-docker run --name BIDSvalidation_container \
-           --user $userID \
-           --rm \
-           --volume $rawdatadir:/data:ro \
-           bids/validator \
-               /data \
-           > ${studydir}/derivatives/bids-validator_report.txt 2>&1
+#docker run --name BIDSvalidation_container \
+#           --user $userID \
+#           --rm \
+#           --volume $rawdatadir:/data:ro \
+#           bids/validator \
+#               /data \
+#           > ${studydir}/derivatives/bids-validator_report.txt 2>&1
            #> ${logdir}/bids-validator_report.txt 2>&1                   
            # For BIDS compliance, we want the validator report to go to the top level of derivatives. But for debugging, we want all logs from a given script to go to a script-specific folder
            
