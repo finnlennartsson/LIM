@@ -23,10 +23,10 @@ Options:
 [ $# -ge 1 ] || { usage; }
 command=$@
 sID=$1
-shift
+shift;
 
 # Default 
-inputdcmfolder = $rawdcmdir/$sID
+inputdcmfolder=$rawdcmdir/$sID
 
 # Read arguments
 while [ $# -gt 0 ]; do
