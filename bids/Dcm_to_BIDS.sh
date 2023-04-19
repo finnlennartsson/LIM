@@ -7,7 +7,7 @@ usage()
   echo "usage: $base subjectID sessionID [options]
 Conversion of DICOMs to BIDS and validation of BIDS dataset
 The scripts uses Docker and heudiconv
-- DICOMs are expected to be in $studyfolder/rawdicomdir
+- DICOMs are expected to be in $studyfolder/dicomdir
 - Heuristics-files are located in code-subfolder $codedir/heudiconv_heuristics
 - NIfTIs are written into a BIDS-organised folder $studyfolder/sourcedata
 
@@ -31,7 +31,7 @@ shift
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 studydir=$PWD 
 rawdatadir=$studydir/sourcedata
-dcmdir=$studydir/rawdicomdir
+dcmdir=$studydir/dicomdir
 heuristicfile=$codedir/heudiconv_heuristics/lim_heuristic.py
 
 logdir=${studydir}/derivatives/preprocessing_logs/sub-${sID}
