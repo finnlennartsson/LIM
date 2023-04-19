@@ -31,7 +31,7 @@ inputdcmfolder = $rawdcmdir/$sID
 # Read arguments
 while [ $# -gt 0 ]; do
     case "$1" in
-	-DCMfolder  shift; inputdcmfolder=$1; ;;
+	-DCMfolder)  shift; inputdcmfolder=$1; ;;
 	-h|-help|--help) usage; ;;
 	-*) echo "$0: Unrecognized option $1" >&2; usage; ;;
 	*) break ;;
