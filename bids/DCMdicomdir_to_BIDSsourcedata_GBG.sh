@@ -5,7 +5,7 @@
 usage()
 {
   base=$(basename "$0")
-  echo "usage: $base subjectID [options]
+  echo "usage: $base DCMfolder sID [options]
 Conversion of DICOMs to BIDS and validation of BIDS dataset
 The scripts uses Docker and heudiconv
 - DICOMs are expected to be in $studydir/dicomdir
@@ -25,11 +25,23 @@ Options:
 
 [ $# -ge 1 ] || { usage; }
 command=$@
-sID=$1
+DCMfolder=$1
+sID=$2
+shift; shift
+
+# Read arguments
+while [ $# -gt 0 ]; do
+    case "$1" in
+	-h|-help|--help) usage; ;;
+	-*) echo "$0: Unrecognized option $1" >&2; usage; ;;
+	*) break ;;
+    esac
+    shift
+done
 
 # Define Folders
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-studydir=`pwd` #studydir=`dirname -- "$codedir"`
+studydir=`pwd`
 sourcedatadir=$studydir/sourcedata;
 dcmdir=$studydir/dicomdir;
 logdir=${studydir}/derivatives/preprocessing_logs/sub-${sID}
