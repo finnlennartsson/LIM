@@ -13,8 +13,7 @@ The scripts uses Docker and heudiconv
 - NIfTIs are written into a BIDS-organised folder $studydir/sourcedata (SIC!)
 
 Arguments:
-  DCMfolder         Subject input DCMfolder in $studydir/dicomdir (e.g. 615)
-  sID				Subject ID (i.e. LIMStudyID) 
+  sID       SubjectID with data in $studydir/dicomdir (e.g. 615)
 Options:
   -h / -help / --help           Print usage.
 "
@@ -25,9 +24,8 @@ Options:
 
 [ $# -ge 1 ] || { usage; }
 command=$@
-DCMfolder=$1
-sID=$2
-shift; shift
+sID=$1
+shift;
 
 # Read arguments
 while [ $# -gt 0 ]; do
@@ -68,7 +66,7 @@ docker pull bids/validator:latest
 docker run --name heudiconv_container \
            --user $userID \
            --rm \
-           -it \
+           --it \
            --volume $studydir:/base \
            --volume $codedir:/code \
            --volume $dcmdir:/dataIn:ro \
