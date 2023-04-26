@@ -74,7 +74,7 @@ docker run --name heudiconv_container \
            --volume $dcmdir:/dataIn:ro \
            --volume $sourcedatadir:/dataOut \
            nipy/heudiconv \
-               -d /dataIn/$DCMfolder/*/*.dcm \
+               -d /dataIn/sub-{subject}/*/*.dcm \
                -f /code/heudiconv_heuristics/gbg_lim_heuristic.py \
                -s ${sID} \
                -c dcm2niix \
