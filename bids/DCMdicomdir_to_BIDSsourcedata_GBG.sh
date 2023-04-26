@@ -5,7 +5,7 @@
 usage()
 {
   base=$(basename "$0")
-  echo "usage: $base DCMfolder sID [options]
+  echo "usage: $base sID [options]
 Conversion of DICOMs to BIDS and validation of BIDS dataset
 The scripts uses Docker and heudiconv
 - DICOMs are expected to be in $studydir/dicomdir
