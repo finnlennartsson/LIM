@@ -29,7 +29,7 @@ sID=$1
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 studydir=`pwd` #studydir=`dirname -- "$codedir"`
 sourcedatadir=$studydir/sourcedata;
-dcmdir=$studydir/media/hickmat/1045/GBG_DICOMDIR/;
+dcmdir=$studydir/dicomdir;
 logdir=${studydir}/derivatives/preprocessing_logs/sub-${sID}
 scriptname=`basename $0 .sh`
 
