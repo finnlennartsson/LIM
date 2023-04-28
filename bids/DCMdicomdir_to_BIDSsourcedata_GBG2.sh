@@ -4,12 +4,12 @@
 usage()
 {
   base=$(basename "$0")
-  echo "usage: $base subjectID [options]
-Conversion of DICOMs to BIDS and validation of BIDS dataset
-The scripts uses Docker and heudiconv
-- DICOMs are expected to be in $studyfolder/dicomdir
-- Heuristics-files are located in code-subfolder $codedir/heudiconv_heuristics
-- NIfTIs are written into a BIDS-organised folder $studyfolder/sourcedata (SIC!)
+  echo "usage: $base sID [options]
+Conversion of DICOMs to BIDS and BIDS-validation of BIDS dataset
+The scripts uses Docker for heudiconv and BIDS-validator 
+- DICOMs are expected to be in "studydir"/dicomdir/sub-sID
+- Heuristics-file gbg_lim_heuristic.py is in code-subfolder "codedir"/heudiconv_heuristics
+- NIfTIs are written into a BIDS-organised folder "studydir"/sourcedata (SIC!)
 
 Arguments:
   sID				Subject ID (i.e. LIMStudyID) 
