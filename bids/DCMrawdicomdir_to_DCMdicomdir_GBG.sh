@@ -8,8 +8,7 @@ usage()
   echo "usage: $base DCMfolder sID [options]
 Re-arrangement of raw DICOMs into structured DICOMs
 The scripts uses dcm2niix
-- Arranges DICOMs into labelled folders (incl renaming of dcm files) into $studydir/dicomdir
-- Basename of input DCM-folder is preserved, i.e. output is $studydir/dicomdir/"DCMfolder"
+- Arranges DICOMs into labelled folders in $studydir/dicomdir/sub-sID (incl renaming of dcm files)
 
 Arguments:
   DCMfolder                     Folder with Raw DICOMs (path to DCM-folder, e.g. $studydir/rawdicomdir/615)
