@@ -1,5 +1,5 @@
 # Less is More - LIM
-These are dHCP inspired processing pipelines for neonatal MRI data.
+These are [dHCP](http://www.developingconnectome.org/project) inspired processing pipelines for neonatal MRI data.
 
 This repository can go inside the /code folder within of a [BIDS](https://bids.neuroimaging.io/) `"studyfolder"`.
 
