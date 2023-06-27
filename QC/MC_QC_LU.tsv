@@ -1,3 +1,4 @@
+participant_ID	file	QC_MC_Pass_Borderline_Fail	QC_Signature	QC_Comment
 sub-1012	anat/sub-1012_run-001_T2w.nii.gz	0.5	FL	Subtle motion artifacts. Insufficient coverage vertex
 sub-1014	anat/sub-1014_run-001_T2w.nii.gz	0.5	FL	Light zig-zag motion artifacts
 sub-1015	anat/sub-1015_run-001_T2w.nii.gz	1	FL	Insufficient coverage vertex
@@ -18,9 +19,9 @@ sub-1053	anat/sub-1053_run-001_T2w.nii.gz	1	FL
 sub-1054	anat/sub-1054_run-001_T2w.nii.gz	1	FL	
 sub-1055	anat/sub-1055_run-001_T2w.nii.gz	1	FL	Discrete artifacts in (uneven) slice stack at vertex
 sub-1056	anat/sub-1056_run-001_T2w.nii.gz	1	FL	
-sub-1059	anat/sub-1059_run-001_T2w.nii.gz	0	FL	Strange blurring-appearing and slice-stack related artifacts 
+sub-1059	anat/sub-1059_run-001_T2w.nii.gz	0	FL	"Strange blurring-appearing and slice-stack related artifacts "
 sub-1064	anat/sub-1064_run-001_T2w.nii.gz	1	FL	
-sub-1065	anat/sub-1065_run-001_T2w.nii.gz	1	FL	A bit dirty looking WM signal 
+sub-1065	anat/sub-1065_run-001_T2w.nii.gz	1	FL	"A bit dirty looking WM signal "
 sub-1066	anat/sub-1066_run-001_T2w.nii.gz	0.5	FL	Head shaking motion (side-to-side) giving light motion artifacts and zig-zag cortex, mainly frontal lobes and visible in Cor plane
 sub-1071	anat/sub-1071_run-001_T2w.nii.gz	1	FL	
 sub-1072	anat/sub-1072_run-001_T2w.nii.gz	1	FL	
