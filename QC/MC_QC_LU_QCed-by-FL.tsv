@@ -1,0 +1,26 @@
+sub-1012	anat/sub-1012_run-001_T2w.nii.gz	0.5	FL	Subtle motion artifacts. Insufficient coverage vertex
+sub-1014	anat/sub-1014_run-001_T2w.nii.gz	0.5	FL	Light zig-zag motion artifacts
+sub-1015	anat/sub-1015_run-001_T2w.nii.gz	1	FL	Insufficient coverage vertex
+sub-1016	anat/sub-1016_run-001_T2w.nii.gz	1	FL	IVH grade 3
+sub-1018	anat/sub-1018_run-001_T2w.nii.gz	0.5	FL	Insufficient coverage vertex
+sub-1019	anat/sub-1019_run-001_T2w.nii.gz	0.5	FL	Zig-zag motion artifacts
+sub-1022	anat/sub-1022_run-001_T2w.nii.gz	0	FL	Moderate motion artifacts
+sub-1025	anat/sub-1025_run-001_T2w.nii.gz	1	FL	
+sub-1026	anat/sub-1026_run-001_T2w.nii.gz	1	FL	IVH grade 4
+sub-1027	anat/sub-1027_run-001_T2w.nii.gz	1	FL	
+sub-1031	anat/sub-1031_run-001_T2w.nii.gz	0	FL	Moderate motion artifacts
+sub-1033	anat/sub-1033_run-001_T2w.nii.gz	0.5	FL	Slight zig-zag inter-slice-stack pattern on Sag and Cor
+sub-1034	anat/sub-1034_run-001_T2w.nii.gz	1	FL	
+sub-1036	anat/sub-1036_run-001_T2w.nii.gz	1	FL	
+sub-1044	anat/sub-1044_run-001_T2w.nii.gz	1	FL	
+sub-1046	anat/sub-1046_run-001_T2w.nii.gz	1	FL	Discrete artifacts in slices 36 & 38
+sub-1053	anat/sub-1053_run-001_T2w.nii.gz	1	FL	
+sub-1054	anat/sub-1054_run-001_T2w.nii.gz	1	FL	
+sub-1055	anat/sub-1055_run-001_T2w.nii.gz	1	FL	Discrete artifacts in (uneven) slice stack at vertex
+sub-1056	anat/sub-1056_run-001_T2w.nii.gz	1	FL	
+sub-1059	anat/sub-1059_run-001_T2w.nii.gz	0	FL	Strange blurring-appearing and slice-stack related artifacts 
+sub-1064	anat/sub-1064_run-001_T2w.nii.gz	1	FL	
+sub-1065	anat/sub-1065_run-001_T2w.nii.gz	1	FL	A bit dirty looking WM signal 
+sub-1066	anat/sub-1066_run-001_T2w.nii.gz	0.5	FL	Head shaking motion (side-to-side) giving light motion artifacts and zig-zag cortex, mainly frontal lobes and visible in Cor plane
+sub-1071	anat/sub-1071_run-001_T2w.nii.gz	1	FL	
+sub-1072	anat/sub-1072_run-001_T2w.nii.gz	1	FL	
