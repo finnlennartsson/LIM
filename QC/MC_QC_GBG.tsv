@@ -1,0 +1,70 @@
+participant_ID	file	Use_as_T2MCRIB_Yes1_No0	QC_MC_Pass1_Borderline0.5_Fail0	QC_Signature	QC_Comment		
+sub-2001	anat/sub-2001_run-001_T2w.nii.gz	1	0.5		"IVH grade 4. No motion but small signal variations between slice stacks "		
+sub-2001	anat/sub-2001_run-002_T2w.nii.gz	0	0		"Noisy! No motion but small signal variations between slice stacks "		
+sub-2003	anat/sub-2003_run-001_T2w.nii.gz	1	0.5		"Small/moderate motion but large signal variations between slice stacks "		
+sub-2003	anat/sub-2003_run-002_T2w.nii.gz	0	0		"Noisy! No motion but small/moderate signal variations between slice stacks "		
+sub-2004	anat/sub-2004_run-001_T2w.nii.gz	0	0		Moderate head shaking motion. Small/moderate signal variations between slice stacks		
+sub-2004	anat/sub-2004_run-002_T2w.nii.gz	1	0		Moderate head shaking motion. Small/moderate signal variations between slice stacks		
+sub-2006	anat/sub-2006_run-001_T2w.nii.gz	0	0		Bad quality. Motion and signal variations		
+sub-2006	anat/sub-2006_run-002_T2w.nii.gz	0	0.5		Signal variations		
+sub-2006	anat/sub-2006_run-003_T2w.nii.gz	0	0		Large motions		
+sub-2006	anat/sub-2006_run-004_T2w.nii.gz	1	0.5		Small motions. Signal variations		
+sub-2007	anat/sub-2007_run-001_T2w.nii.gz	0	0		Severe motion		
+sub-2007	anat/sub-2007_run-002_T2w.nii.gz	1	0.5		Small motion. Some slices with large inter-slice signal variations		
+sub-2007	anat/sub-2007_run-003_T2w.nii.gz	0	0		Severe motion		
+sub-2007	anat/sub-2007_run-004_T2w.nii.gz	0	0.5		Small motion. Some slices with large inter-slice signal variations		
+sub-2011	anat/sub-2011_run-001_T2w.nii.gz	1	0.5		Inter-slice signal variations		
+sub-2011	anat/sub-2011_run-002_T2w.nii.gz	0	0		Some motion but A/P signal gradients		
+sub-2013	anat/sub-2013_run-001_T2w.nii.gz	1	0		"Moderate head shaking motion "		
+sub-2013	anat/sub-2013_run-002_T2w.nii.gz	0	0		"Moderate head shaking motion "		
+sub-2014	anat/sub-2014_run-001_T2w.nii.gz	1	0		Motion and inter-slice signal variations		
+sub-2014	anat/sub-2014_run-002_T2w.nii.gz	0	0		Motion and inter-slice signal variations		
+sub-2019	anat/sub-2019_run-001_T2w.nii.gz	0	0		Motion and inter-slice signal variations		
+sub-2019	anat/sub-2019_run-002_T2w.nii.gz	1	0.5		Motion and inter-slice signal variations		
+sub-2021	anat/sub-2021_run-001_T2w.nii.gz	1	1		Subtle/small inter-slice signal variations		
+sub-2021	anat/sub-2021_run-002_T2w.nii.gz	0	1		Subtle/small inter-slice signal variations		
+sub-2022	anat/sub-2022_run-001_T2w.nii.gz	1	0.5		Small motion and inter-slice signal variations		
+sub-2022	anat/sub-2022_run-002_T2w.nii.gz	0	0.5		Small motion and inter-slice signal variations		
+sub-2023	anat/sub-2023_run-001_T2w.nii.gz	0	0		Severe motion		
+sub-2023	anat/sub-2023_run-002_T2w.nii.gz	0	0		Moderate/severe motion		
+sub-2023	anat/sub-2023_run-003_T2w.nii.gz	0	0		Severe motion		
+sub-2023	anat/sub-2023_run-004_T2w.nii.gz	1	0		Moderate motion		
+sub-2025	anat/sub-2025_run-001_T2w.nii.gz	1	0.5		Small subependymal bleeding in the right lateral ventricle. Inter-slice variations		
+sub-2025	anat/sub-2025_run-002_T2w.nii.gz	0	0.5		Small subependymal bleeding in the right lateral ventricle. Inter-slice variations		
+sub-2027	anat/sub-2027_run-001_T2w.nii.gz	1	0		IVH grade 4. Small motion and moderate inter-slice signal variations		
+sub-2027	anat/sub-2027_run-002_T2w.nii.gz	0	0		IVH grade 4. Small motion and moderate inter-slice signal variations		
+sub-2029	anat/sub-2029_run-001_T2w.nii.gz	1	0.5		IVH grade 2. Small motion and moderate inter-slice signal variations		
+sub-2029	anat/sub-2029_run-002_T2w.nii.gz	0	0.5		IVH grade 2. Small motion and moderate inter-slice signal variations		
+sub-2036	anat/sub-2036_run-001_T2w.nii.gz	1	0.5		Small motion and moderate inter-slice signal variations		
+sub-2036	anat/sub-2036_run-002_T2w.nii.gz	0	0.5		Small motion and moderate inter-slice signal variations		
+sub-2037	anat/sub-2037_run-001_T2w.nii.gz	1	0.5		IVH grade 2. Small motion and moderate inter-slice signal variations		
+sub-2037	anat/sub-2037_run-002_T2w.nii.gz	0	0		IVH grade 2. Small motion and moderate inter-slice signal variations		
+sub-2038	anat/sub-2038_run-001_T2w.nii.gz	1	0.5		Small motion and inter-slice signal variations		
+sub-2038	anat/sub-2038_run-002_T2w.nii.gz	0	0.5		Small motion and inter-slice signal variations		
+sub-2040	anat/sub-2040_run-001_T2w.nii.gz	1	0		Moderate/Severe motion		
+sub-2040	anat/sub-2040_run-002_T2w.nii.gz	0	0		Moderate/Severe motion		
+sub-2041	anat/sub-2041_run-001_T2w.nii.gz	1	0.5		Small/moderate motion and inter-slice signal variations		
+sub-2041	anat/sub-2041_run-002_T2w.nii.gz	0	0.5		Small/moderate motion and inter-slice signal variations		
+sub-2044	anat/sub-2044_run-001_T2w.nii.gz	1	0.5		A bit noisy and blurry. Small motion and inter-slice signal variations		
+sub-2044	anat/sub-2044_run-002_T2w.nii.gz	0	0.5		A bit noisy and blurry. Small motion and inter-slice signal variations		
+sub-2045	anat/sub-2045_run-001_T2w.nii.gz	1	0.5		Small/moderate signal variations		
+sub-2045	anat/sub-2045_run-002_T2w.nii.gz	0	0.5		Small/moderate signal variations		
+sub-2047	anat/sub-2047_run-001_T2w.nii.gz	1	0		Moderate motion and inter-slice signal variations		
+sub-2047	anat/sub-2047_run-002_T2w.nii.gz	0	0		Moderate motion and inter-slice signal variations		
+sub-2048	anat/sub-2048_run-001_T2w.nii.gz	1	0.5		Small motion and signal variations		
+sub-2048	anat/sub-2048_run-002_T2w.nii.gz	0	0.5		Small motion and signal variations		
+sub-2049	anat/sub-2049_run-001_T2w.nii.gz	1	0.5		IVH grade 2. Small signal variations		
+sub-2049	anat/sub-2049_run-002_T2w.nii.gz	0	0.5		IVH grade 2. Small signal variations		
+sub-2052	anat/sub-2052_run-001_T2w.nii.gz	1	0.5		IVH grade 4. Small signal variations		
+sub-2052	anat/sub-2052_run-002_T2w.nii.gz	0	0.5		IVH grade 4. Small signal variations		
+sub-2053	anat/sub-2053_run-001_T2w.nii.gz	0	0.5		Small/moderate motion and signal variations		
+sub-2054	anat/sub-2054_run-001_T2w.nii.gz	0	0		Severe motion		
+sub-2054	anat/sub-2054_run-002_T2w.nii.gz	0	0		Severe motion		
+sub-2054	anat/sub-2054_run-003_T2w.nii.gz	1	0		Severe motion		
+sub-2054	anat/sub-2054_run-004_T2w.nii.gz	0	0		Severe motion		
+sub-2056	anat/sub-2056_run-001_T2w.nii.gz	1	0.5		IVH grade 2. Signal variations		
+sub-2056	anat/sub-2056_run-002_T2w.nii.gz	0	0.5		IVH grade 2. Signal variations		
+sub-2058	anat/sub-2058_run-001_T2w.nii.gz	1	0		IVH grade 2. Small/moderate motion and signal variations		
+sub-2058	anat/sub-2058_run-002_T2w.nii.gz	0	0		IVH grade 2. Small/moderate motion and signal variations		
+sub-2059	anat/sub-2059_run-001_T2w.nii.gz	1	0		IVH grade 2. Small/moderate motion and signal variations		
+sub-2059	anat/sub-2059_run-002_T2w.nii.gz	0	0		IVH grade 2. Small/moderate motion and signal variations		
