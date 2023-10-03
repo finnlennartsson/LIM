@@ -5,8 +5,7 @@ usage()
 {
   base=$(basename "$0")
   echo "usage: $base subjectID age [options]
-Script to run the mirtk neonatal-segmentation on sMRI preprocessed data
-
+Script to run the mirtk neonatal-segmentation (no input mask) on sMRI preprocessed data
 
 Arguments:
   sID				Subject ID (e.g. 108) 
