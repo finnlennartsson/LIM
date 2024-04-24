@@ -30,7 +30,7 @@ def infotodict(seqinfo):
     # fMRI
     
     # FMAPs
-    fmap_dwi_pa = create_key('sub-{subject}/fmap/sub-{subject}_acq-dwi__dir-AP_run-00{item:01d}_epi')
+    fmap_dwi_pa = create_key('sub-{subject}/fmap/sub-{subject}_acq-dwi_dir-AP_run-00{item:01d}_epi')
 
     # SBRefs
     
