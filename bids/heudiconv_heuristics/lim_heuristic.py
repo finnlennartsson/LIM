@@ -23,16 +23,18 @@ def infotodict(seqinfo):
     t1w = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_T1w')
     t2w = create_key('sub-{subject}/anat/sub-{subject}_run-00{item:01d}_T2w')
     t2wspc = create_key('sub-{subject}/anat/sub-{subject}_acq-spc_run-00{item:01d}_T2w')
-        
+    
     # DWI
+    dwiap = create_key('sub-{subject}/dwi/sub-{subject}_dir-AP_run-00{item:01d}_dwi')
     
     # fMRI
     
     # FMAPs
+    fmap_dwi_pa = create_key('sub-{subject}/fmap/sub-{subject}_acq-dwi__dir-AP_run-00{item:01d}_epi')
 
     # SBRefs
     
-    info = {t1w: [], t2w: [], t2wspc: []}
+    info = {t1w: [], t2w: [], t2wspc: [], dwiap: [], fmap_dwi_pa: []}
     last_run = len(seqinfo)
 
     for idx, s in enumerate(seqinfo):
@@ -73,10 +75,16 @@ def infotodict(seqinfo):
         # FLAIR
         
         # DIFFUSION
-            
+        # dir AP
+        if (s.dim4 == 67) and ('DTI_b800_AP' in s.series_description) and ('ORIGINAL' in s.image_type):
+            info[dwi_ap].append(s.series_id) # append if multiple series meet criteria
+          
         # rs-fMRI
 
         # FMAPs
+        # DWI dir-PA - NOTE that we have to place these here as they cannot easily by put in the BIDS /dwi folder
+        if (s.dim4 == 3) and ('DTI_b000_PA' in s.series_description) and ('DIFFUSION' in s.image_type):
+            info[fmap_dwi_pa].append(s.series_id) # append if multiple series meet criteria
 
         # SBRefs
 
