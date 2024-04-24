@@ -25,7 +25,7 @@ def infotodict(seqinfo):
     t2wspc = create_key('sub-{subject}/anat/sub-{subject}_acq-spc_run-00{item:01d}_T2w')
     
     # DWI
-    dwiap = create_key('sub-{subject}/dwi/sub-{subject}_dir-AP_run-00{item:01d}_dwi')
+    dwi_ap = create_key('sub-{subject}/dwi/sub-{subject}_dir-AP_run-00{item:01d}_dwi')
     
     # fMRI
     
@@ -34,7 +34,7 @@ def infotodict(seqinfo):
 
     # SBRefs
     
-    info = {t1w: [], t2w: [], t2wspc: [], dwiap: [], fmap_dwi_pa: []}
+    info = {t1w: [], t2w: [], t2wspc: [], dwi_ap: [], fmap_dwi_pa: []}
     last_run = len(seqinfo)
 
     for idx, s in enumerate(seqinfo):
@@ -76,7 +76,7 @@ def infotodict(seqinfo):
         
         # DIFFUSION
         # dir AP
-        if ( (s.dim4 == 67) or (s.dim3 == 2948) ) and ('DTI_b800_AP' in s.series_description) and ('ORIGINAL' in s.image_type):
+        if ((s.dim4 == 67) or (s.dim3 == 2948)) and ('DTI_b800_AP' in s.series_description) and ('ORIGINAL' in s.image_type):
             info[dwi_ap].append(s.series_id) # append if multiple series meet criteria
           
         # rs-fMRI
