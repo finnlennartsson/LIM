@@ -83,7 +83,7 @@ def infotodict(seqinfo):
 
         # FMAPs
         # DWI dir-PA - NOTE that we have to place these here as they cannot easily by put in the BIDS /dwi folder
-        if (s.dim4 == 3) and ('DTI_b000_PA' in s.series_description) and ('DIFFUSION' in s.image_type):
+        if ('DTI_b000_PA' in s.series_description) and ('ORIGINAL' in s.image_type):
             info[fmap_dwi_pa].append(s.series_id) # append if multiple series meet criteria
 
         # SBRefs
