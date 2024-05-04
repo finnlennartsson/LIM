@@ -76,7 +76,7 @@ def infotodict(seqinfo):
         
         # DIFFUSION
         # dir AP
-        if ((s.dim4 == 67) or (s.dim3 == 2948)) and ('DTI_b800_AP' in s.series_description) and ('ORIGINAL' in s.image_type):
+        if ((s.dim4 == 67) or (s.dim3 == 2948) or (s.dim3 == 3082)) and ('DTI_b800_AP' in s.series_description) and ('ORIGINAL' in s.image_type):
             info[dwi_ap].append(s.series_id) # append if multiple series meet criteria
           
         # rs-fMRI
