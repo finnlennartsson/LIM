@@ -29,10 +29,10 @@ age=$2
 
 # Set default arguments
 currdir=`pwd`
-T2=derivatives/sMRI/preproc/sub-$sID/sub-${sID}_desc-preproc_T2w.nii.gz
-datadir=derivatives/sMRI/neonatal-segmentation/sub-$sID
+T2=recon_dir/sub-${sID}_run-00*_T2w/reconstructed.nii.gz
+datadir=derivatives/sMRI/neonatal-segmentation_svrtk/sub-$sID
 threads=10
-atlas=non-rigid-v2
+atlas=ALBERT
 
 # Set codedir (e.g. code/LIM)
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -69,7 +69,7 @@ if [ ! -d $logdir ]; then mkdir -p $logdir; fi
 ################ PIPELINE ################
 
 # Make sure mirtk neonatal-segmentation is in the path
-#source /proj/metrimorphics0/util/prep-mirtk.sh
+#source /proj/metrimorphics0/util/prep-drawem.sh
 
 # Update T2 to point to T2 basename
 T2base=`basename $T2 .nii.gz`
