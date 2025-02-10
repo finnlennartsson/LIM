@@ -11,9 +11,9 @@ Arguments:
   sID				Subject ID (e.g. 108) 
   age				Age at scanning in weeks (e.g. 40)
 Options:
-  -T2				T2 image to segment (default: derivatives/sMRI/preproc/sub-sID/sub-sID_desc-preproc_T2w.nii.gz)
+  -T2				T2 image to segment (default: recon_dir/sub-${sID}_run-00*_T2w/reconstructed.nii.gz)
   -d / -data-dir  <directory>   The directory used to run the script and output the files (default: derivatives/sMRI/neonatal-segmentation/sub-sID)
-  -a / -atlas	  		Atlas to use for DrawEM neonatal segmentation (default: non-rigid-v2)    
+  -a / -atlas	  		Atlas to use for DrawEM neonatal segmentation (default: ALBERT)    
   -t / -threads  <number>       Number of threads (CPU cores) allowed for the registration to run in parallel (default: 10)
   -h / -help / --help           Print usage.
 "
