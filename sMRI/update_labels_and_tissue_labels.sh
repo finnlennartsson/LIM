@@ -8,7 +8,7 @@ usage()
 Script for generating "labels" and "tissue_labels" from a "all_labels" file 
 
 Arguments:
-  all_labels        Edited "all_labels" file 
+  all_labels        DrawEM "all_labels" file to be converted into "labels" and "tissue_labels" files
 Options:
   -h / -help / --help           Print usage.
 "
