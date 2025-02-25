@@ -15,8 +15,11 @@ Options:
   exit;
 }
 
+[ $# -ge 2 ] || { usage; }
+command=$@
 segmentationFile_edit=$1
 shift;
+
 while [ $# -gt 0 ]; do
   case "$1" in
 	-h|-help|--help) usage; ;;
