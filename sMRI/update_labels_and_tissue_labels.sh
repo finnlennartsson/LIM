@@ -15,7 +15,7 @@ Options:
   exit;
 }
 
-[ $# -ge 2 ] || { usage; }
+[ $# -ge 1 ] || { usage; }
 command=$@
 segmentationFile_edit=$1
 shift;
