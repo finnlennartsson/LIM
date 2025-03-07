@@ -1,0 +1,60 @@
+#!/bin/bash
+# Calculate total ICV volume for each subject and output to CSV file
+
+# Base directory containing subject folders
+BASE_DIR="/proj/limsegmentation1/projects/lim/derivatives/sMRI/neonatal-segmentation_svrtk"
+
+# Segmentation filename
+SEGMENTATION_FILE="reconstructed_ICV.nii.gz"
+
+# Output CSV file (will contain subject number and total ICV volume)
+OUTPUT_CSV="ICV_volumes.csv"
+
+# Create or clear the CSV file before starting
+echo "Subject,ICV_Volume_mm3" > "$OUTPUT_CSV"
+
+# Loop through all subject directories (sub-*/segmentations)
+for subject_dir in "$BASE_DIR"/sub-*; do
+    # Extract subject number from the directory name (sub-XXXX)
+    subject_number=$(basename "$subject_dir" | sed 's/sub-//')
+
+    # Define the path to the reconstructed ICV file
+    input_file="$subject_dir/segmentations/$SEGMENTATION_FILE"
+
+    # Check if the segmentation file exists
+    if [ -f "$input_file" ]; then
+        echo "Processing subject $subject_number..."
+
+        # Initialize the ICV volume to 0
+        total_ICV_volume=0
+
+        # Loop through each label (1, 2, 3, 5, 6, 7, 8, 9) and calculate the volume using fslstats
+        for label in 1 2 3 5 6 7 8 9; do
+            echo "  Calculating volume for label $label..."
+
+            # Create a binary mask for the current label
+            mask_file="$subject_dir/segmentations/mask_label_$label.nii.gz"
+            fslmaths "$input_file" -thr $label -uthr $label -bin "$mask_file"
+
+            # Get the volume of the label using fslstats (in mm³)
+            label_volume=$(fslstats "$mask_file" -V | awk '{print $2}')
+            
+            # Add the label volume to the total ICV volume
+            total_ICV_volume=$(echo "$total_ICV_volume + $label_volume" | bc)
+
+            # Clean up temporary mask file
+            rm "$mask_file"
+        done
+
+        # Round the total ICV volume to the nearest whole number
+        rounded_ICV_volume=$(echo "($total_ICV_volume+0.5)/1" | bc)
+
+        # Append the subject's total ICV volume to the CSV file
+        echo "  Total ICV volume for subject $subject_number: $rounded_ICV_volume mm³"
+        echo "$subject_number,$rounded_ICV_volume" >> "$OUTPUT_CSV"
+    else
+        echo "Warning: $input_file not found in $subject_dir, skipping..."
+    fi
+done
+
+echo "Total ICV volume calculation complete. Results saved to $OUTPUT_CSV."

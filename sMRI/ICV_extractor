@@ -1,0 +1,41 @@
+#!/bin/bash
+# Extract ICV components from tissue_labels for all subjects
+
+# Base directory containing subject folders
+BASE_DIR="/proj/limsegmentation1/projects/lim/derivatives/sMRI/neonatal-segmentation_svrtk"
+
+# Segmentation filename
+SEGMENTATION_FILE="reconstructed_tissue_labels.nii.gz"
+
+# Output filename (corrected)
+OUTPUT_FILENAME="reconstructed_ICV.nii.gz"
+
+# Loop through all subject directories (sub-*/segmentations)
+for subject_dir in "$BASE_DIR"/sub-*/segmentations; do
+    # Define input and output paths
+    input_file="$subject_dir/$SEGMENTATION_FILE"
+    output_file="$subject_dir/$OUTPUT_FILENAME"
+
+    # Debug: print out the input and output file paths
+    echo "Input file: $input_file"
+    echo "Output file: $output_file"
+
+    # Check if input file exists
+    if [ -f "$input_file" ]; then
+        echo "Processing $input_file..."
+
+        # Use fslmaths correctly to combine the desired labels:
+        # Create an empty image
+        fslmaths "$input_file" -mul 0 "$output_file"
+
+        # Explicitly include the desired labels: 1, 2, 3, 5, 6, 7, 8, 9 (exclude 4)
+        for label in 1 2 3 5 6 7 8 9; do
+            fslmaths "$input_file" -thr $label -uthr $label -add "$output_file" "$output_file"
+        done
+        
+        echo "Saved modified segmentation: $output_file"
+    else
+        echo "Warning: $input_file not found in $subject_dir, skipping..."
+    fi
+done
+

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Output file
+output_file="volume_results_white_matter.csv"
+echo "Subject,Volume_mm3" > $output_file  # Add header
+
+for subj in sub-*/segmentations/reconstructed_tissue_labels_ITKSNAP.nii.gz; do
+    subj_id=$(basename $(dirname $(dirname $subj)))  # Extract subject ID
+    echo "Processing $subj_id..."
+
+    # Temporary file for label 3
+    label3="label_3_${subj_id}.nii.gz"
+
+    # Extract label 3 (White Matter)
+    fslmaths $subj -thr 3 -uthr 3 $label3
+
+    # Compute volume and extract only the second column (volume in mm³)
+    volume=$(fslstats $label3 -V | awk '{print $2}')
+
+    # Save results in CSV format
+    echo "$subj_id,$volume" >> $output_file
+
+    # Cleanup temporary files
+    rm -f $label3
+done
+
+echo "Processing complete! Results saved in $output_file."

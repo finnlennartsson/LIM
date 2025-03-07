@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Output file
+output_file="volume_results.csv"
+echo "Subject,Volume_mm3" > $output_file  # Add header
+
+for subj in sub-*/segmentations/reconstructed_tissue_labels_ITKSNAP.nii.gz; do
+    subj_id=$(basename $(dirname $(dirname $subj)))  # Extract subject ID
+    echo "Processing $subj_id..."
+
+    # Temporary files
+    label2="label_2_${subj_id}.nii.gz"
+    label7="label_7_${subj_id}.nii.gz"
+    combined="combined_label_2_7_${subj_id}.nii.gz"
+
+    # Extract labels 2 and 7
+    fslmaths $subj -thr 2 -uthr 2 $label2
+    fslmaths $subj -thr 7 -uthr 7 $label7
+
+    # Combine the extracted labels
+    fslmaths $label2 -add $label7 $combined
+
+    # Compute volume and extract only the second column (volume in mm³)
+    volume=$(fslstats $combined -V | awk '{print $2}')
+
+    # Save results in CSV format
+    echo "$subj_id,$volume" >> $output_file
+
+    # Cleanup temporary files
+    rm -f $label2 $label7 $combined
+done
+
+echo "Processing complete! Results saved in $output_file."

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Output file
+output_file="volume_results_labels_1_2.csv"
+echo "Subject,Volume_Label1_mm3,Volume_Label2_mm3,Total_Volume_mm3" > $output_file  # Add header
+
+for subj in sub-*/segmentations/reconstructed_labels_ITKSNAP.nii.gz; do
+    subj_id=$(basename $(dirname $(dirname $subj)))  # Extract subject ID
+    echo "Processing $subj_id..."
+
+    # Temporary files for labels 1 and 2
+    label1="label_1_${subj_id}.nii.gz"
+    label2="label_2_${subj_id}.nii.gz"
+
+    # Extract labels 1 and 2
+    fslmaths $subj -thr 1 -uthr 1 $label1
+    fslmaths $subj -thr 2 -uthr 2 $label2
+
+    # Compute volumes and extract only the second column (volume in mm³)
+    volume1=$(fslstats $label1 -V | awk '{print $2}')
+    volume2=$(fslstats $label2 -V | awk '{print $2}')
+    total_volume=$(echo "$volume1 + $volume2" | bc)
+
+    # Round volumes to the nearest integer
+    volume1=$(printf "%.0f" $volume1)
+    volume2=$(printf "%.0f" $volume2)
+    total_volume=$(printf "%.0f" $total_volume)
+
+    # Save results in CSV format
+    echo "$subj_id,$volume1,$volume2,$total_volume" >> $output_file
+
+    # Cleanup temporary files
+    rm -f $label1 $label2
+done
+
+echo "Processing complete! Results saved in $output_file."
+
