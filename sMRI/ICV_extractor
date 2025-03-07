@@ -5,7 +5,7 @@
 BASE_DIR="/proj/limsegmentation1/projects/lim/derivatives/sMRI/neonatal-segmentation_svrtk"
 
 # Segmentation filename
-SEGMENTATION_FILE="reconstructed_tissue_labels.nii.gz"
+SEGMENTATION_FILE="reconstructed_tissue_labels_ITKSNAP.nii.gz"
 
 # Output filename (corrected)
 OUTPUT_FILENAME="reconstructed_ICV.nii.gz"
