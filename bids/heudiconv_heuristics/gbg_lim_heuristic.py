@@ -25,6 +25,7 @@ def infotodict(seqinfo):
     t2wspc = create_key('sub-{subject}/anat/sub-{subject}_acq-spc_run-00{item:01d}_T2w')
         
     # DWI
+    dwi_ap = create_key('sub-{subject}/dwi/sub-{subject}_dir-AP_run-00{item:01d}_dwi')
     
     # fMRI
     
@@ -73,7 +74,8 @@ def infotodict(seqinfo):
         # FLAIR
         
         # DIFFUSION
-            
+        if ((s.dim4 == 70) and ('Ax DTI 2mm' in s.series_description) and ('ORIGINAL' in s.image_type):
+            info[dwi_ap].append(s.series_id) # append if multiple series meet criteria
         # rs-fMRI
 
         # FMAPs
