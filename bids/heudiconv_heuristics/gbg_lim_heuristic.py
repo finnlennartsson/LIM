@@ -74,7 +74,7 @@ def infotodict(seqinfo):
         # FLAIR
         
         # DIFFUSION
-        if (s.dim4 == 70) and ('Ax DTI 2mm' in s.series_description) and ('ORIGINAL' in s.image_type):
+        if (s.dim4 == 70 or s.dim3 == 3220) and ('Ax DTI 2mm' in s.series_description) and ('ORIGINAL' in s.image_type):
             info[dwi_ap].append(s.series_id) # append if multiple series meet criteria
         # rs-fMRI
 
